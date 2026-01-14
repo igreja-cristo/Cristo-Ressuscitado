@@ -170,3 +170,58 @@ body {
 .dizimo div.contato span a {
     text-decoration: underline;
 }
+.conteiner {
+    display: flex;
+    background-color: #FFE4C4;
+    border-top: 1vw solid #7197A5;
+    padding: 25px;
+    align-items: center;
+    justify-content: space-around;
+}
+.image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.pascom {
+  border-right: 0.5px solid #2d1515b4;
+  padding-right: 12vw;
+}
+.pascom p {
+  font-size: 12px;
+  letter-spacing: 1px;
+    text-align: justify;
+    margin: 12vh 0 0 5vw;
+    color: #000;
+    
+}
+
+.pascom img {
+    width: 80px;
+}
+.pascom img.imagem {
+    width: 180px;
+}
+
+.endereco {
+    font-size: 11px;
+    color: #2d15159c;
+}
+.endereco h3 {
+    font-size: 13px;
+    padding: 10px 0;
+}
+.endereco p {
+    padding: 5px 0;
+}
+.somos {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    border: 1px solid #2d1515b4;
+    font-size: 13px;
+    color: #2d15159c;
+    padding: 15px;
+    border-radius: 12px;
+    margin-left: 2vw;
+}

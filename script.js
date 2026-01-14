@@ -46,4 +46,3 @@ background.addEventListener('click', () => {
     background.classList.remove('ativo');
     document.body.style.backgroundColor = '#ecf0f1';
 });
-
