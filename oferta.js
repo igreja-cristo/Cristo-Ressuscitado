@@ -1,24 +1,4 @@
 
-const imagens = document.querySelectorAll("ul li img");
-const modal = document.getElementById("modal");
-const modalConteudo = document.getElementById("modal-conteudo");
-
-
-imagens.forEach(img => {
-    img.addEventListener("click", () => {
-        const arquivo = img.dataset.arquivo;
-
-    });
-});
-
-
-modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.style.display = "none";
-        modalConteudo.innerHTML = "";
-    }
-});
-
 /* ============================
    MENU LATERAL (TOGGLE)
 ============================ */
@@ -46,4 +26,3 @@ background.addEventListener('click', () => {
     background.classList.remove('ativo');
     document.body.style.backgroundColor = '#ecf0f1';
 });
-
