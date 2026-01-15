@@ -13,7 +13,7 @@ botao.addEventListener('click', () => {
     menuLateral.classList.toggle('ativo');     // Mostra/esconde menu
     botao.classList.toggle('ativo');           // Anima o ícone de menu
     topo.classList.toggle('ativo');            // Bloqueia a rolagem ou aplica efeitos
-    background.classList.toggle('ativo');      // Ativa o fundo escurecido
+    if(background) background.classList.toggle('ativo');      // Ativa o fundo escurecido
 
     // Muda a cor de fundo da página conforme o menu está aberto ou fechado
     document.body.style.backgroundColor = 
@@ -21,10 +21,31 @@ botao.addEventListener('click', () => {
 });
 
 // Fecha o menu ao clicar no fundo escuro
-background.addEventListener('click', () => {
-    menuLateral.classList.remove('ativo');
-    botao.classList.remove('ativo');
-    topo.classList.remove('ativo');
-    background.classList.remove('ativo');
-    document.body.style.backgroundColor = '#ecf0f1';
-});
+if(background) {
+    background.addEventListener('click', () => {
+        menuLateral.classList.remove('ativo');
+        botao.classList.remove('ativo');
+        topo.classList.remove('ativo');
+        background.classList.remove('ativo');
+        document.body.style.backgroundColor = '#ecf0f1';
+    });
+}
+
+
+//======COUNTER DO SLIDER======//
+
+let counter = 1;
+document.getElementById("radio1").checked = true;
+
+setInterval(function(){
+    nextImage();
+},4000)
+
+function nextImage() {
+    counter++;
+    if(counter>4){
+        counter = 1;
+    }
+    
+    document.getElementById("radio"+counter).checked = true;
+}
