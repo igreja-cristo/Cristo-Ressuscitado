@@ -1,0 +1,491 @@
+:root {
+    --secondary-color: #306d83;
+    --text-color: #fff;
+    --text-secondary-color: #001100;
+    --background-color: #7197A5;
+}
+
+body {
+    font-family: "Notable", sans-serif;
+    transition: background-color 0.5s ease;
+}
+
+.lato-thin {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.lato-light {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.lato-regular {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lato-bold {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lato-black {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.lato-thin-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.lato-light-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.lato-regular-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.lato-bold-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.lato-black-italic {
+    font-family: "Lato", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+.menu-lateral {
+    position: fixed;
+    right: 0;
+    top: -500px;
+    width: 300px;
+    height: 0%;
+    background-color: var(--background-color);
+    z-index: 5;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.menu-lateral.ativo {
+    height: 100%;
+    top: 0px;
+}
+
+.menu-lateral ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 80px;
+}
+
+.menu-lateral ul li {
+    padding: 15px 30px;
+}
+
+.menu-lateral ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-lateral ul li:hover {
+    background-color: var(--secondary-color);
+}
+
+.toggle {
+    background-color: var(--background-color);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 6;
+    border-radius: 90px;
+    font-size: 24px;
+    border: none;
+    padding: 5px 15px 10px;
+    cursor: pointer;
+    color: #ecf1ee;
+    transition: all 0.5s ease-in-out;
+}
+
+.toggle:hover {
+    background-color: var(--secondary-color);
+    font-style: italic;
+}
+
+.toggle.ativo {
+    transform: rotate(-90deg);
+}
+
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 4;
+}
+
+.background.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0 15px 100px;
+    background-color: #FFE4C4;
+    z-index: 6;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #2D1515;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.menu {
+    margin-right: 12vw;
+}
+
+.menu nav ul {
+    display: flex;
+    gap: 30px;
+    font-size: 20x;
+    color: #2D1515;
+}
+
+.banner {
+    width: 100%;
+    height: 600px;
+    background: url(../imagens/paroquia-provisoria.png);
+    background-size: cover;
+    background-position: center;
+    margin: 0 0 3vw 0;
+
+}
+
+.banner img {
+    padding: 50px 0 15px 100px;
+
+}
+
+.historia {
+    background-color: #FFE4C4;
+    border-radius: 25px;
+    padding: 15px 15px 15px 100px;
+    margin: 5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.historia h2 {
+    padding: 30px 0 130px 0;
+    font-size: 3rem;
+}
+
+.historia p {
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    line-height: 2.5vw;
+    padding: 10px 0 120px 0;
+}
+
+.historia div.interessado p {
+    font-family: "Notable", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: first baseline;
+}
+
+.historia button {
+    background-color: #7197A5;
+    color: white;
+    padding: 2vw;
+    border-radius: 3vw;
+    font-size: 2rem;
+    margin: 0 4vw 2vw 2vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+
+}
+
+.horarios {
+    border-bottom: 10px solid #7197A5;
+    padding: 20px 0 20px 0;
+    margin: 5vw;
+
+}
+
+.horarios div {
+    background-color: white;
+    border-radius: 25px;
+    padding: 15px 15px 15px 100px;
+    margin: 0 35vw 5vw 5vw;
+    border: 10px solid #FFE4C4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.horarios h2 {
+    padding: 30px 0 130px 0;
+    font-size: 3rem;
+}
+
+.horarios ul {
+    list-style: none;
+    font-family: "Lato", sans-serif;
+    font-size: 2rem;
+    line-height: 3.5vw;
+    padding: 10px 0 120px 0;
+}
+
+.horarios img {
+    margin: 0 0 0 30vw;
+}
+
+.conheca h2 {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.conheca h3 {
+    font-size: 2rem;
+    padding: 20px 0 0 0;
+    display: flex;
+
+}
+
+.conheca div.paroco {
+    display: flex;
+    justify-content: left;
+    margin: 5vw 0 10vw 5vw;
+
+}
+
+.conheca div.diacono {
+    display: flex;
+    justify-content: right;
+    margin: 5vw 5vw 10vw 0;
+
+}
+
+.slider {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    width: 400%;
+    height: 400px;
+    display: flex;
+
+}
+
+
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    height: 100vh;
+    position: relative;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.manual-nav {
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+
+}
+
+.manual-btn {
+    border: 3px solid white;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    background-color: transparent;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 30px;
+}
+
+.manual-btn:hover,
+.manual-btn:active {
+    background-color: white;
+    transform: scale(1.2);
+}
+
+
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -25%;
+}
+
+#radio3:checked~.first {
+    margin-left: -50%;
+}
+
+#radio4:checked~.first {    
+    margin-left: -75%;
+}
+
+.nav-auto div{
+    border: 2px solid #fff;
+    padding: 2px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+
+
+}
+.nav-auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 900px;
+    display: flex;
+    justify-content: center;
+}
+.nav-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1{
+    background-color: white;
+}
+#radio2:checked ~ .nav-auto .auto-btn2{
+    background-color: white;
+}#radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: white;
+}#radio4:checked ~ .nav-auto .auto-btn4{
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+.conteiner {
+    display: flex;
+    background-color: #FFE4C4;
+    border-top: 1vw solid #7197A5;
+    padding: 25px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pascom {
+    border-right: 0.5px solid #2d1515b4;
+    padding-right: 12vw;
+}
+
+.pascom p {
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin: 12vh 0 0 5vw;
+    color: #000;
+
+}
+
+.pascom img {
+    width: 80px;
+}
+
+.pascom img.imagem {
+    width: 180px;
+}
+
+.endereco {
+    font-size: 11px;
+    color: #2d15159c;
+}
+
+.endereco h3 {
+    font-size: 13px;
+    padding: 10px 0;
+}
+
+.endereco p {
+    padding: 5px 0;
+}
+
+.somos {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    border: 1px solid #2d1515b4;
+    font-size: 13px;
+    color: #2d15159c;
+    padding: 15px;
+    border-radius: 12px;
+    margin-left: 2vw;
+}
